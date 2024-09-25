@@ -1,5 +1,5 @@
 """
-netCDF4 functions to copy a netcdf file while doing some transformations on
+netcdf functions to copy a netcdf file while doing some transformations on
 variables and dimensions.
 
 An elaborate example of copying a netcdf file could remove one variable
@@ -119,6 +119,14 @@ Subpackages
    netcdfio
 
 """
+# version, author
+try:  # pragma: no cover
+    from ._version import __version__
+except ImportError:  # pragma: no cover
+    # package is not installed
+    __version__ = "0.0.0.dev0"
+__author__  = "Matthias Cuntz"
+
 # print information of a netcdf file
 from .ncinfo import ncinfo, infonetcdf
 # get variables from a netcdf file

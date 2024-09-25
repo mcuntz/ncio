@@ -8,7 +8,7 @@ Research - UFZ, Leipzig, Germany, and continued while at Institut
 National de Recherche pour l'Agriculture, l'Alimentation et
 l'Environnement (INRAE), Nancy, France.
 
-:copyright: Copyright 2009-2023 Matthias Cuntz, Stephan Thober, see AUTHORS.rst for details.
+:copyright: Copyright 2009- Matthias Cuntz, Stephan Thober, see AUTHORS.rst for details.
 :license: MIT License, see LICENSE for details.
 
 .. moduleauthor:: Matthias Cuntz
@@ -48,7 +48,7 @@ __all__ = ['ncread', 'readnetcdf']
 
 
 def ncread(ncfile, var='', code=-1, squeeze=False,
-               pointer=False, overwrite=False):
+           pointer=False, overwrite=False):
     """
     Gets variables of a netcdf file
 

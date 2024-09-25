@@ -1,5 +1,5 @@
-netcdfio
---------
+Copy netcdf files
+-----------------
 
 .. automodule:: ncio.netcdfio
    :members:

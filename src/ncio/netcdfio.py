@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 """
-netCDF4 functions to copy a netcdf file while doing some transformations on
+netcdf functions to copy a netcdf file while replacing and transforming
 variables and dimensions.
 
 This module was written by Matthias Cuntz while at Institut National de
 Recherche pour l'Agriculture, l'Alimentation et l'Environnement (INRAE), Nancy,
 France.
 
-It borrows the idea of get_variable_definition from the netcdf4 thin layer of
+It borrows the idea of get_variable_definition from the netcdf4 thin wrapper of
 David Schaefer.
 
-:copyright: Copyright 2020-2022 Matthias Cuntz, see AUTHORS.rst for details.
+:copyright: Copyright 2020- Matthias Cuntz, see AUTHORS.rst for details.
 :license: MIT License, see LICENSE for details.
 
 .. moduleauthor:: Matthias Cuntz

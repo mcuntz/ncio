@@ -208,7 +208,7 @@ Functions and modules (alphabetical)
    * - :func:`~pyjams.ncinfo.ncinfo`
      - Extract information from netCDF file
    * - :mod:`~pyjams.ncio`
-     - netCDF4 functions to copy a netcdf file while doing some
+     - netcdf functions to copy a netcdf file while doing some
        transformations on variables and dimensions
    * - :func:`~pyjams.ncread.ncread`
      - Read variables from netCDF file
@@ -537,7 +537,7 @@ Functions and modules per category
        * - :func:`~pyjams.ncinfo.ncinfo`
          - Extract information from netCDF file
        * - :mod:`~pyjams.ncio`
-         - netCDF4 functions to copy a netcdf file while doing some
+         - netcdf functions to copy a netcdf file while doing some
            transformations on variables and dimensions
        * - :func:`~pyjams.ncread.ncread`
          - Read variables from netCDF file

@@ -1,7 +1,7 @@
 {
     "language": "eng",
     "license": "MIT",
-    "title": "ncio: netCDF4 functions to copy a netcdf file while doing some transformations on variables and dimensions.",
+    "title": "ncio: functions to easily copy a netCDF4 file, replacing and transforming variables and dimensions.",
     "related_identifiers": [
         {
         "scheme": "url",
@@ -45,5 +45,14 @@
     }
     ],
     "access_right": "open",
-    "description": "<p><strong>ncio</strong> is a thin layer on Python netCDF4 package providing functions to copy a netcdf file while doing some transformations on variables and dimensions.</p>\n\n<p>The complete documentation of ncio is available at: <a href=\"https://mcuntz.github.io/ncio/\">https://mcuntz.github.io/ncio/</a></p>"
+    "description": "<p><strong>ncio</strong> is a Python library functions to copy
+    dimensions, variables, attributes, etc. from one netcdf file to a
+    netcdf output file. Replacements and transformations can be
+    performed on the copied entities such as names can be changed or
+    variable can be replaced with other data. It is a thin wrapper of
+    the netCDF4 Python package that adds no new functionality but
+    rather provides convenience functions to easily read and write
+    netcdf files.</p>\n\n<p>The complete documentation of ncio is
+    available at: <a
+    href=\"https://mcuntz.github.io/ncio/\">https://mcuntz.github.io/ncio/</a></p>"
 }
