@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-netcdf functions to copy a netcdf file while replacing and transforming
+functions to copy a netcdf file while replacing and transforming
 variables and dimensions.
 
 This module was written by Matthias Cuntz while at Institut National de

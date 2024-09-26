@@ -17,7 +17,6 @@ The following functions are provided
 
 .. autosummary::
    ncread
-   readnetcdf
 
 History
     * Written Jul 2009 by
@@ -39,12 +38,13 @@ History
     * Invert functions and wrapper functions, Feb 2023, Matthias Cuntz
     * Rename file to ncread, Nov 2023, Matthias Cuntz
     * Move ncinfo in separate file, Nov 2023, Matthias Cuntz
+    * Remove wrapper function readnetcdf, Sep 2024, Matthias Cuntz
 
 """
 from .ncinfo import ncinfo
 
 
-__all__ = ['ncread', 'readnetcdf']
+__all__ = ['ncread']
 
 
 def ncread(ncfile, var='', code=-1, squeeze=False,
@@ -159,13 +159,6 @@ def ncread(ncfile, var='', code=-1, squeeze=False,
 
     f.close()
     return v
-
-
-def readnetcdf(*args, **kwargs):
-    """
-    Wrapper for :func:`ncread`
-    """
-    return ncread(*args, **kwargs)
 
 
 if __name__ == '__main__':

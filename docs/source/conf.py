@@ -240,7 +240,7 @@ texinfo_documents = [
         "Documentation of ncio",
         author,
         "ncio",
-        "netcdf functions to copy a netcdf file while doing some transformations on variables and dimensions.",
+        "functions to copy a netcdf file while doing some transformations on variables and dimensions.",
         "Miscellaneous",
     )
 ]

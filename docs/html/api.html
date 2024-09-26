@@ -1,0 +1,638 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>API Reference &#8212; ncio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=628480d8" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=b99859c3"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="netcdf info" href="ncinfo.html" />
+    <link rel="prev" title="ncio - work easily with netcdf files" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="contents.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ncio</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">ncio - work easily with netcdf files</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ncinfo.html">netcdf info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ncread.html">read netcdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="netcdfio.html">Copy netcdf files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/mcuntz/ncio" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/mcuntz/ncio/edit/main/docs/api.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/mcuntz/ncio/issues/new?title=Issue%20on%20page%20%2Fapi.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/api.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>API Reference</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-ncio">
+<span id="api-reference"></span><span id="api"></span><h1>API Reference<a class="headerlink" href="#module-ncio" title="Link to this heading">#</a></h1>
+<p>functions to copy a netcdf file while doing transformations on
+variables and dimensions.</p>
+<p>An elaborate example of copying a netcdf file could remove one variable
+(removevar), rename another variable (renamevar), replace name and values of a
+third variable (replacevar), setting some attributes of old and new variables
+(replaceatt), and leave the output file open for further modification
+(noclose):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">ncio</span>
+
+<span class="n">newarr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="mi">720</span><span class="p">,</span> <span class="mi">360</span><span class="p">),</span> <span class="mf">273.15</span><span class="p">)</span>
+<span class="n">fo</span> <span class="o">=</span> <span class="n">ncio</span><span class="o">.</span><span class="n">copy_file</span><span class="p">(</span><span class="s1">&#39;infile.nc&#39;</span><span class="p">,</span> <span class="s1">&#39;infile.nc&#39;</span><span class="p">,</span>
+                    <span class="n">removevar</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;var0&#39;</span><span class="p">],</span>
+                    <span class="n">renamevar</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;var1&#39;</span><span class="p">:</span> <span class="s1">&#39;varnew1&#39;</span><span class="p">},</span>
+                    <span class="n">replacevar</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;var2&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;varnew2&#39;</span><span class="p">:</span> <span class="n">newvar</span><span class="p">}},</span>
+                    <span class="n">replaceatt</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;varnew1&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;renamed var1&#39;</span><span class="p">},</span>
+                                <span class="s1">&#39;varnew2&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;new variable for var2&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;arbitrary&#39;</span><span class="p">}},</span>
+                    <span class="n">noclose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># change var3 afterwards</span>
+<span class="n">ovar</span> <span class="o">=</span> <span class="n">fo</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;var3&#39;</span><span class="p">]</span>
+<span class="n">ovar</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">ovar</span><span class="p">[:]</span> <span class="o">*</span> <span class="mf">3.</span>
+<span class="n">fo</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Using the individual routines for manipulating dimensions and variables could
+copy all variables in a file while making latitudinal means (assume longitudes
+in the last dimension), and add a new variable:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">netCDF4</span> <span class="k">as</span> <span class="nn">nc</span>
+<span class="kn">import</span> <span class="nn">ncio</span>
+
+<span class="n">ifile</span> <span class="o">=</span> <span class="s1">&#39;input.nc&#39;</span>  <span class="c1"># name of input file</span>
+<span class="n">vtime</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span>      <span class="c1"># name of time variable</span>
+<span class="n">vlon</span>  <span class="o">=</span> <span class="s1">&#39;lon&#39;</span>       <span class="c1"># name of longitude variable</span>
+
+<span class="c1"># open files</span>
+<span class="n">ofile</span> <span class="o">=</span> <span class="n">ncio</span><span class="o">.</span><span class="n">set_output_filename</span><span class="p">(</span><span class="n">ifile</span><span class="p">,</span> <span class="s1">&#39;-latmean.nc&#39;</span><span class="p">)</span>
+<span class="n">fi</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">ifile</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s1">&#39;file_format&#39;</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">fi</span><span class="p">):</span>
+    <span class="n">fo</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">ofile</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">fi</span><span class="o">.</span><span class="n">file_format</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">fo</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">ofile</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;NETCDF4&#39;</span><span class="p">)</span>
+<span class="n">ntime</span> <span class="o">=</span> <span class="n">fi</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="n">vtime</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
+
+<span class="c1"># meta data</span>
+<span class="n">ncio</span><span class="o">.</span><span class="n">copy_global_attributes</span><span class="p">(</span><span class="n">fi</span><span class="p">,</span> <span class="n">fo</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;history&#39;</span><span class="p">:</span> <span class="s1">&#39;latitudinal mean&#39;</span><span class="p">})</span>
+
+<span class="c1"># copy dimensions</span>
+<span class="n">ncio</span><span class="o">.</span><span class="n">copy_dimensions</span><span class="p">(</span><span class="n">fi</span><span class="p">,</span> <span class="n">fo</span><span class="p">,</span> <span class="n">removedim</span><span class="o">=</span><span class="p">[</span><span class="n">vlon</span><span class="p">])</span>
+
+<span class="c1"># create variables</span>
+<span class="c1"># this could be one command (time=None or keyword time left out)</span>
+<span class="c1"># but I like to have the non-time dependent variables at the beginning</span>
+<span class="c1"># of the netcdf file</span>
+<span class="c1"># create static variables (independent of time)</span>
+<span class="n">ncio</span><span class="o">.</span><span class="n">create_variables</span><span class="p">(</span><span class="n">fi</span><span class="p">,</span> <span class="n">fo</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timedim</span><span class="o">=</span><span class="n">vtime</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                      <span class="n">removedim</span><span class="o">=</span><span class="p">[</span><span class="n">vlon</span><span class="p">])</span>
+<span class="c1"># create dynamic variables (time dependent)</span>
+<span class="n">ncio</span><span class="o">.</span><span class="n">create_variables</span><span class="p">(</span><span class="n">fi</span><span class="p">,</span> <span class="n">fo</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timedim</span><span class="o">=</span><span class="n">vtime</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                      <span class="n">removedim</span><span class="o">=</span><span class="p">[</span><span class="n">vlon</span><span class="p">])</span>
+
+<span class="c1"># create new variable</span>
+<span class="n">dims</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">fi</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;var1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dimensions</span><span class="p">)</span>
+<span class="n">dims</span> <span class="o">=</span> <span class="n">dims</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">odict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;var2&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;dtype&#39;</span><span class="p">:</span> <span class="n">fi</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;var1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span>
+         <span class="s1">&#39;standard_name&#39;</span><span class="p">:</span> <span class="s1">&#39;var2&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;2nd variable&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;dimensions&#39;</span><span class="p">:</span> <span class="n">dims</span><span class="p">}</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="n">ncio</span><span class="o">.</span><span class="n">create_new_variable</span><span class="p">(</span><span class="n">odict</span><span class="p">,</span> <span class="n">fo</span><span class="p">,</span> <span class="n">izip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># copy static variables (not time-dependent) making latitudinal means</span>
+<span class="k">for</span> <span class="n">ivar</span> <span class="ow">in</span> <span class="n">fi</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">vtime</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ivar</span><span class="o">.</span><span class="n">dimensions</span><span class="p">:</span>
+        <span class="n">ovar</span> <span class="o">=</span> <span class="n">fo</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="n">ivar</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">vlon</span> <span class="ow">in</span> <span class="n">ivar</span><span class="o">.</span><span class="n">dimensions</span><span class="p">:</span>
+            <span class="n">ovar</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">ivar</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ovar</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">ivar</span><span class="p">[:]</span>
+
+<span class="c1"># copy dynamic variables (time-dependent) making latitudinal means</span>
+<span class="k">for</span> <span class="n">tt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ntime</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">ivar</span> <span class="ow">in</span> <span class="n">fi</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">vtime</span> <span class="ow">in</span> <span class="n">ivar</span><span class="o">.</span><span class="n">dimensions</span><span class="p">:</span>
+            <span class="n">ovar</span> <span class="o">=</span> <span class="n">fo</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="n">ivar</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">vlon</span> <span class="ow">in</span> <span class="n">ivar</span><span class="o">.</span><span class="n">dimensions</span><span class="p">:</span>
+                <span class="n">ovar</span><span class="p">[</span><span class="n">tt</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="n">ivar</span><span class="p">[</span><span class="n">tt</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">ivar</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">ovar</span><span class="p">[</span><span class="n">tt</span><span class="p">]</span> <span class="o">=</span> <span class="n">ivar</span><span class="p">[</span><span class="n">tt</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">ovar</span><span class="p">[</span><span class="n">tt</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="n">ivar</span><span class="p">[</span><span class="n">tt</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+
+<span class="c1"># set new variable</span>
+<span class="n">shape1</span> <span class="o">=</span> <span class="n">fi</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;var1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">shape1</span> <span class="o">=</span> <span class="n">shape1</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">var2</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">shape1</span><span class="p">))</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">shape1</span><span class="p">)</span>
+
+<span class="c1"># finish</span>
+<span class="n">fi</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">fo</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">copyright<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Copyright 2020- Matthias Cuntz, see AUTHORS.rst for details.</p>
+</dd>
+<dt class="field-even">license<span class="colon">:</span></dt>
+<dd class="field-even"><p>MIT License, see LICENSE for details.</p>
+</dd>
+</dl>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading">#</a></h2>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="ncinfo.html#module-ncio.ncinfo" title="ncio.ncinfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ncinfo</span></code></a>(ncfile[, var, code, variables, ...])</p></td>
+<td><p>Get information on variables in a netcdf file</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ncread.html#module-ncio.ncread" title="ncio.ncread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ncread</span></code></a>(ncfile[, var, code, squeeze, ...])</p></td>
+<td><p>Gets variables of a netcdf file</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="netcdfio.html#module-ncio.netcdfio" title="ncio.netcdfio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">netcdfio</span></code></a></p></td>
+<td><p>functions to copy a netcdf file while replacing and transforming variables and dimensions.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ncinfo.html">netcdf info</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ncinfo.html#ncio.ncinfo.ncinfo"><code class="docutils literal notranslate"><span class="pre">ncinfo()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ncread.html">read netcdf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ncread.html#ncio.ncread.ncread"><code class="docutils literal notranslate"><span class="pre">ncread()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="netcdfio.html">Copy netcdf files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="netcdfio.html#ncio.netcdfio.copy_dimensions"><code class="docutils literal notranslate"><span class="pre">copy_dimensions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="netcdfio.html#ncio.netcdfio.copy_file"><code class="docutils literal notranslate"><span class="pre">copy_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="netcdfio.html#ncio.netcdfio.copy_global_attributes"><code class="docutils literal notranslate"><span class="pre">copy_global_attributes()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="netcdfio.html#ncio.netcdfio.copy_variables"><code class="docutils literal notranslate"><span class="pre">copy_variables()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="netcdfio.html#ncio.netcdfio.create_new_variable"><code class="docutils literal notranslate"><span class="pre">create_new_variable()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="netcdfio.html#ncio.netcdfio.create_variables"><code class="docutils literal notranslate"><span class="pre">create_variables()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="netcdfio.html#ncio.netcdfio.get_fill_value_for_dtype"><code class="docutils literal notranslate"><span class="pre">get_fill_value_for_dtype()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="netcdfio.html#ncio.netcdfio.get_variable_definition"><code class="docutils literal notranslate"><span class="pre">get_variable_definition()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="netcdfio.html#ncio.netcdfio.set_output_filename"><code class="docutils literal notranslate"><span class="pre">set_output_filename()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ncio - work easily with netcdf files</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ncinfo.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">netcdf info</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matthias Cuntz
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2020-2024, Matthias Cuntz.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

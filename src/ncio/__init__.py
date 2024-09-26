@@ -1,5 +1,5 @@
 """
-netcdf functions to copy a netcdf file while doing some transformations on
+functions to copy a netcdf file while doing transformations on
 variables and dimensions.
 
 An elaborate example of copying a netcdf file could remove one variable
@@ -128,9 +128,9 @@ except ImportError:  # pragma: no cover
 __author__  = "Matthias Cuntz"
 
 # print information of a netcdf file
-from .ncinfo import ncinfo, infonetcdf
+from .ncinfo import ncinfo
 # get variables from a netcdf file
-from .ncread import ncread, readnetcdf
+from .ncread import ncread
 # functions to copy netcdf file
 from .netcdfio import copy_dimensions, copy_file
 from .netcdfio import copy_global_attributes, copy_variables
@@ -139,8 +139,8 @@ from .netcdfio import get_fill_value_for_dtype, get_variable_definition
 from .netcdfio import set_output_filename
 
 __all__ = [
-    'ncinfo', 'infonetcdf',
-    'ncread', 'readnetcdf',
+    'ncinfo',
+    'ncread',
     'copy_dimensions', 'copy_file', 'copy_global_attributes',
     'copy_variables', 'create_new_variable', 'create_variables',
     'get_fill_value_for_dtype', 'get_variable_definition',

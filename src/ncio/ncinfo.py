@@ -17,7 +17,6 @@ The following functions are provided
 
 .. autosummary::
    ncinfo
-   infonetcdf
 
 History
     * Written Mar 2022 from ncread by moving all info abilities into separate
@@ -26,11 +25,12 @@ History
     * Move ncinfo in separate file, Nov 2023, Matthias Cuntz
     * sort=True default, Nov 2023, Matthias Cuntz
     * Enforce keywords after var, Nov 2023, Matthias Cuntz
+    * Remove wrapper function infonetcdf, Sep 2024, Matthias Cuntz
 
 """
 
 
-__all__ = ['ncinfo', 'infonetcdf']
+__all__ = ['ncinfo']
 
 
 def ncinfo(ncfile,
@@ -280,13 +280,6 @@ def ncinfo(ncfile,
     # no keyword
     f.close()
     return
-
-
-def infonetcdf(*args, **kwargs):
-    """
-    Wrapper for :func:`ncinfo`
-    """
-    return ncinfo(*args, **kwargs)
 
 
 if __name__ == '__main__':
