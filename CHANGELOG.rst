@@ -3,6 +3,7 @@ Changelog
 
 v0.13 (Sep 2024)
     * Make `ncio` a standalone package.
+    * Remove wrappers `readnetcdf` and `infonetcdf`.
 
 v0.12 (Sep 2024)
     * Delete test for float128 because no 128-bit datatype in netcdf.
