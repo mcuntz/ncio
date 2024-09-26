@@ -30,64 +30,63 @@ class TestNcread(unittest.TestCase):
     def test_ncread(self):
         import numpy as np
         import netCDF4 as nc
-        from ncio import ncread, readnetcdf
+        from ncio import ncread
 
         ncfile = 'tests/test_ncread.nc'
         ncfile1 = 'tests/test_ncread1.nc'
 
-        for fncread in [ncread, readnetcdf]:
-            # var
-            fout = fncread(ncfile, var='is1')
-            fsoll = np.full((2, 4), 1.)
-            assert isinstance(fout, np.ndarray)
-            self.assertEqual(_flatten(fout), _flatten(fsoll))
+        # var
+        fout = ncread(ncfile, var='is1')
+        fsoll = np.full((2, 4), 1.)
+        assert isinstance(fout, np.ndarray)
+        self.assertEqual(_flatten(fout), _flatten(fsoll))
 
-            # code
-            fout = fncread(ncfile, code=129)
-            fsoll = np.full((2, 4), 2.)
-            assert isinstance(fout, np.ndarray)
-            self.assertEqual(_flatten(fout), _flatten(fsoll))
+        # code
+        fout = ncread(ncfile, code=129)
+        fsoll = np.full((2, 4), 2.)
+        assert isinstance(fout, np.ndarray)
+        self.assertEqual(_flatten(fout), _flatten(fsoll))
 
-            # squeeze
-            fout = fncread(ncfile, var='is1', squeeze=True)
-            fsoll = np.full((2, 4), 1.)
-            assert isinstance(fout, np.ndarray)
-            self.assertEqual(_flatten(fout), _flatten(fsoll))
+        # squeeze
+        fout = ncread(ncfile, var='is1', squeeze=True)
+        fsoll = np.full((2, 4), 1.)
+        assert isinstance(fout, np.ndarray)
+        self.assertEqual(_flatten(fout), _flatten(fsoll))
 
-            # pointer
-            fh, var = fncread(ncfile1, var='is1', pointer=True)
-            fsoll = np.full((2, 4), 1.)
-            assert isinstance(fh, nc.Dataset)
-            assert isinstance(var, nc.Variable)
-            self.assertEqual(var.shape, (2, 4))
-            fout = var[:]
-            self.assertEqual(_flatten(fout), _flatten(fsoll))
-            fh.close()
+        # pointer
+        fh, var = ncread(ncfile1, var='is1', pointer=True)
+        fsoll = np.full((2, 4), 1.)
+        assert isinstance(fh, nc.Dataset)
+        assert isinstance(var, nc.Variable)
+        self.assertEqual(var.shape, (2, 4))
+        fout = var[:]
+        self.assertEqual(_flatten(fout), _flatten(fsoll))
+        fh.close()
 
-            # overwrite
-            fh, var = fncread(ncfile1, var='is1', overwrite=True)
-            fsoll = np.full((2, 4), 2.)
-            assert isinstance(fh, nc.Dataset)
-            assert isinstance(var, nc.Variable)
-            self.assertEqual(var.shape, (2, 4))
-            var[:] *= 2.
-            fh.close()
-            fout = fncread(ncfile1, var='is1')
-            self.assertEqual(_flatten(fout), _flatten(fsoll))
-            fh, var = fncread(ncfile1, var='is1', overwrite=True)
-            var[:] *= 0.5
-            fh.close()
+        # overwrite
+        fh, var = ncread(ncfile1, var='is1', overwrite=True)
+        fsoll = np.full((2, 4), 2.)
+        assert isinstance(fh, nc.Dataset)
+        assert isinstance(var, nc.Variable)
+        self.assertEqual(var.shape, (2, 4))
+        var[:] *= 2.
+        fh.close()
+        fout = ncread(ncfile1, var='is1')
+        self.assertEqual(_flatten(fout), _flatten(fsoll))
+        fh, var = ncread(ncfile1, var='is1', overwrite=True)
+        var[:] *= 0.5
+        fh.close()
 
-            # errors
-            # no var or code
-            self.assertRaises(ValueError, fncread, ncfile)
-            # var does not exist
-            self.assertRaises(ValueError, fncread, ncfile, 'is3')
-            # code does not exist
-            self.assertRaises(ValueError, fncread, ncfile, code=130)
-            # #vars > 1 with overwrite
-            self.assertRaises(ValueError, fncread, ncfile, 'is1',
-                              overwrite=True)
+        # errors
+        # no var or code
+        self.assertRaises(ValueError, ncread, ncfile)
+        # var does not exist
+        self.assertRaises(ValueError, ncread, ncfile, 'is3')
+        # code does not exist
+        self.assertRaises(ValueError, ncread, ncfile, code=130)
+        # #vars > 1 with overwrite
+        self.assertRaises(ValueError, ncread, ncfile, 'is1',
+                          overwrite=True)
 
 
 if __name__ == "__main__":
