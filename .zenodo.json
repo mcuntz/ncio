@@ -49,11 +49,10 @@
     dimensions, variables, attributes, etc. from one netcdf file to a
     netcdf output file. Replacements and transformations can be
     performed on the copied entities such as names can be changed or
-    variable can be replaced with other data. It is a thin wrapper of
+    variables can be replaced with other data. It is a thin wrapper of
     the netCDF4 Python package that adds no new functionality but
     rather provides convenience functions to work easily with netcdf
     files.</p>\n\n<p>The complete documentation of ncio is available
     at: <a
     href=\"https://mcuntz.github.io/ncio/\">https://mcuntz.github.io/ncio/</a></p>"
 }
-

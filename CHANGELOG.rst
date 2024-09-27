@@ -1,6 +1,9 @@
 Changelog
 ---------
 
+v1.0 (Sep 2024)
+    * First standalone release at Github.
+
 v0.13 (Sep 2024)
     * Make `ncio` a standalone package.
     * Remove wrappers `readnetcdf` and `infonetcdf`.
