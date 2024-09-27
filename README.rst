@@ -250,8 +250,8 @@ for details.
 Copyright (c) 2020- Matthias Cuntz
 
 
-.. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.3893705.svg
-   :target: https://doi.org/10.5281/zenodo.3893705
+.. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.13851994.svg
+   :target: https://doi.org/10.5281/zenodo.13851994
 .. |PyPI version| image:: https://badge.fury.io/py/ncio.svg
    :target: https://badge.fury.io/py/ncio
 .. |Conda version| image:: https://anaconda.org/conda-forge/ncio/badges/version.svg
