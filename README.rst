@@ -10,7 +10,7 @@ file while replacing and transforming variables and dimensions.
 About ncio
 ----------
 
-**ncio** is a Python library that provides functions to copy
+``ncio`` is a Python library that provides functions to copy
 dimensions, variables, attributes, etc. from one netcdf file to a
 netcdf output file. Replacements and transformations can be performed
 on the copied entities such as names can be changed or variables can
@@ -18,11 +18,7 @@ be replaced with other data. It is a thin wrapper of the netCDF4_
 Python package that adds no new functionality but rather provides
 convenience functions to work easily with netcdf files.
 
-
-Documentation
--------------
-
-The complete documentation for **ncio** is available at Github
+The complete documentation for ``ncio`` is available at Github
 pages:
 
    https://mcuntz.github.io/ncio/
@@ -31,7 +27,7 @@ pages:
 copy_file
 ---------
 
-**ncio** provides the functions ``ncio.copy_dimensions``,
+``ncio`` provides the functions ``ncio.copy_dimensions``,
 ``ncio.copy_global_attributes``, and ``ncio.copy_variables`` to copy
 dimensions, attributes, and variables from one netcdf file to
 another. The functions have the keywords `renamedim`, `removedim`,
@@ -233,18 +229,15 @@ or via `conda`:
 
    conda install -c conda-forge ncio
 
-
 Requirements
-------------
-
--  `NumPy <https://www.numpy.org>`__
--  `netCDF4 <https://unidata.github.io/netcdf4-python/>`__
+   * numpy_
+   * netCDF4_
 
 
 License
 -------
 
-**ncio** is distributed under the MIT License. See the `LICENSE`_ file
+``ncio`` is distributed under the MIT License. See the `LICENSE`_ file
 for details.
 
 Copyright (c) 2020- Matthias Cuntz
@@ -264,4 +257,6 @@ Copyright (c) 2020- Matthias Cuntz
    :target: https://coveralls.io/github/mcuntz/ncio?branch=master
 
 .. _LICENSE: https://github.com/mcuntz/ncio/LICENSE
-.. _netCDF4: https://unidata.github.io/netcdf4-python/
+.. _matplotlib: https://matplotlib.org/
+.. _netCDF4: https://github.com/Unidata/netcdf4-python
+.. _numpy: https://numpy.org/
