@@ -251,10 +251,10 @@ Copyright (c) 2020- Matthias Cuntz
    :target: https://anaconda.org/conda-forge/ncio
 .. |License| image:: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
    :target: https://github.com/mcuntz/ncio/blob/master/LICENSE
-.. |Build Status| image:: https://github.com/mcuntz/ncio/workflows/Continuous%20Integration/badge.svg?branch=master
-   :target: https://github.com/mcuntz/ncio/actions
-.. |Coverage Status| image:: https://coveralls.io/repos/github/mcuntz/ncio/badge.svg?branch=master
-   :target: https://coveralls.io/github/mcuntz/ncio?branch=master
+.. |Build Status| image:: https://github.com/mcuntz/ncio/actions/workflows/main.yml/badge.svg
+   :target: https://github.com/mcuntz/ncio/actions/workflows/main.yml
+.. |Coverage Status| image:: https://coveralls.io/repos/github/mcuntz/ncio/badge.svg?branch=main
+   :target: https://coveralls.io/github/mcuntz/ncio?branch=main
 
 .. _LICENSE: https://github.com/mcuntz/ncio/LICENSE
 .. _matplotlib: https://matplotlib.org/
