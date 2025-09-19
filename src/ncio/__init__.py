@@ -50,13 +50,13 @@ in the last dimension), and add a new variable:
        fo = nc.Dataset(ofile, 'w', format='NETCDF4')
    ntime = fi.dimensions[vtime].size
 
-   # meta data
+   # copy meta data
    ncio.copy_global_attributes(fi, fo, add={'history': 'latitudinal mean'})
 
    # copy dimensions
    ncio.copy_dimensions(fi, fo, removedim=[vlon])
 
-   # create variables
+   # create variables in output file
    # this could be one command (time=None or keyword time left out)
    # but I like to have the non-time dependent variables at the beginning
    # of the netcdf file
@@ -67,7 +67,7 @@ in the last dimension), and add a new variable:
    ncio.create_variables(fi, fo, time=True, timedim=vtime, fill=True,
                          removedim=[vlon])
 
-   # create new variable
+   # create a new variable in output file
    dims = list(fi.variables['var1'].dimensions)
    dims = dims[:-1]
    odict = {'name': 'var2',

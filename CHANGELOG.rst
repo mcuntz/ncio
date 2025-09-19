@@ -1,8 +1,10 @@
 Changelog
 ---------
 
-v1.x (??? 2024)
-   * Change build and coverage status to main branch.
+v1.x (??? 2025)
+   * Touch up example in API.
+   * Removed remnant numpy.float.
+   * Changed build and coverage status to main branch.
 
 v1.0 (Sep 2024)
    * First standalone release at Github.

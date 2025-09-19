@@ -505,7 +505,7 @@ def create_new_variable(invardef, fo, izip=False, fill=None,
     .. code-block:: python
 
        nvar = {'name': 'new_field',
-               'dtype': np.dtype(np.float),
+               'dtype': np.dtype(float),
                'dimensions': ('time', 'y', 'x'),
                'units': 'kg/m2/s',
                }
